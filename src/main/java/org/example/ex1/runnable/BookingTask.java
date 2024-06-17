@@ -1,4 +1,7 @@
-package org.example;
+package org.example.ex1.runnable;
+
+
+import org.example.ex1.service.TicketBooking;
 
 public class BookingTask implements Runnable {
     private final TicketBooking ticketBooking;

@@ -1,4 +1,7 @@
-package org.example;
+package org.example.ex1;
+
+import org.example.ex1.runnable.BookingTask;
+import org.example.ex1.service.TicketBooking;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,4 +28,5 @@ public class Main {
 
         System.out.println("Final available seats: " + ticketBooking.getAvailableSeats());
     }
+
 }

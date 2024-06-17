@@ -1,4 +1,4 @@
-package org.example;
+package org.example.ex2.service;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -12,17 +12,13 @@ public class TicketBooking {
     }
 
     public synchronized void bookTicket(String threadName, int numberOfSeats) {
-//        lock.lock();
-        try {
-            if (numberOfSeats > availableSeats) {
-                System.out.println(threadName + " - Not enough seats available.");
-            } else {
-                System.out.println(threadName + " - Successfully booked " + numberOfSeats + " seats.");
-                availableSeats -= numberOfSeats;
-            }
-        } finally {
-          //  lock.unlock();
+        if (numberOfSeats > availableSeats) {
+            System.out.println(threadName + " - Not enough seats available.");
+        } else {
+            System.out.println(threadName + " - Successfully booked " + numberOfSeats + " seats.");
+            availableSeats -= numberOfSeats;
         }
+        System.out.println("----------------------------------------------");
     }
 
     public int getAvailableSeats() {
